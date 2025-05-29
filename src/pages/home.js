@@ -49,7 +49,13 @@ const Home =()=>{
                         {data.filter(movie=>movie.listed_in.split(', ').includes('Action & Adventure'))
                             .map((movie, index)=>(
                             <div key={index} className={'show-container'}>
-                                {movie.title}
+                                <img
+                                    src={movie.poster_url}
+                                    alt={movie.title}
+                                    width={'192vw'}
+                                    height={'166vh'}
+                                />
+                                {/*{movie.title}*/}
                                 {/*{movie.title && movie.title[0] ? movie.title[0] : 'No Title'}*/}
                             </div>
                         ))};
@@ -60,7 +66,13 @@ const Home =()=>{
                         {data.filter(movie=>movie.listed_in.includes('Dramas'))
                             .map((movie, index)=>(
                             <div key={index} className={'show-container'}>
-                                {movie.title}
+                                <img
+                                    src={movie.poster_url}
+                                    alt={movie.title}
+                                    width={'192vw'}
+                                    height={'166vh'}
+                                />
+                                {/*{movie.title}*/}
                                 {/*{movie.Title && movie.Title[0] ? movie.Title[0] : 'No Title'}*/}
                             </div>
                         ))};
@@ -71,7 +83,13 @@ const Home =()=>{
                         {data.filter(movie=>movie.listed_in.includes('Comedies'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
-                                    {movie.title}
+                                    <img
+                                        src={movie.poster_url}
+                                        alt={movie.title}
+                                        width={'192vw'}
+                                        height={'166vh'}
+                                    />
+                                    {/*{movie.title}*/}
                                     {/*{movie.Title && movie.Title[0] ? movie.Title[0] : 'No Title'}*/}
                                 </div>
                             ))};
@@ -81,7 +99,13 @@ const Home =()=>{
                         {data.filter(movie=>movie.listed_in.includes('Crime'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
-                                    {movie.title}
+                                    <img
+                                        src={movie.poster_url}
+                                        alt={movie.title}
+                                        width={'192vw'}
+                                        height={'166vh'}
+                                    />
+                                    {/*{movie.title}*/}
                                     {/*{movie.Title && movie.Title[0] ? movie.Title[0] : 'No Title'}*/}
                                 </div>
                             ))};
@@ -91,7 +115,13 @@ const Home =()=>{
                         {data.filter(movie=>movie.listed_in.includes('Romantic'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
-                                    {movie.title}
+                                    <img
+                                        src={movie.poster_url}
+                                        alt={movie.title}
+                                        width={'192vw'}
+                                        height={'166vh'}
+                                    />
+                                    {/*{movie.title}*/}
                                     {/*{movie.Title && movie.Title[0] ? movie.Title[0] : 'No Title'}*/}
                                 </div>
                             ))};
@@ -101,7 +131,13 @@ const Home =()=>{
                         {data.filter(movie=>movie.listed_in.includes('Sci-Fi & Fantasy'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
-                                    {movie.title}
+                                    <img
+                                        src={movie.poster_url}
+                                        alt={movie.title}
+                                        width={'192vw'}
+                                        height={'166vh'}
+                                    />
+                                    {/*{movie.title}*/}
                                     {/*{movie.Title && movie.Title[0] ? movie.Title[0] : 'No Title'}*/}
                                 </div>
                             ))};
