@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    background-color: saddlebrown;
+}
+.navBar-container{
+    position: relative;
+    height: 5vh;
+    width: 100vw;
+    border-bottom: 1px solid #d3926e;
+    /*border-radius: 10px;*/
+}
