@@ -2,10 +2,8 @@ import '../styles/home.css';
 import {useEffect, useState} from "react";
 
 const Home =()=>{
-    // let new_data = JSON.stringify(data)
     const[data, setData] = useState([]);
-    // let new_data = JSON.stringify(data)
-    // console.log(data)
+
     useEffect(() => {
         fetch("http://localhost:5000")
             .then((res) => {
@@ -22,20 +20,6 @@ const Home =()=>{
                 console.log("An error occurred: ", error)
             });
     }, []);
-    const genres = {};
-
-    // Loop through data to organize by genres
-    data.forEach(movie=>{
-        const movieGenres = movie.listed_in.split(', TV')// split genres by comma
-        movieGenres.forEach(listed_in=>{
-            if(!genres[listed_in]){
-                genres[listed_in] =[]
-            }
-            genres[listed_in].push(movie)
-        })
-    })
-    console.log("Genres: ")
-    console.log(genres)
 
     return (
         <div className={'home-container'}>
@@ -45,12 +29,13 @@ const Home =()=>{
                 <div className={'main-container'}>
                     <div className={'container1'}>
                         <p className={'title'}>Action & Adventure</p>
-
-                        {data.filter(movie=>movie.listed_in.split(', ').includes('Action & Adventure'))
+                        {data.filter(movie=>movie["listed_in"].includes('Action & Adventure'))
                             .map((movie, index)=>(
                             <div key={index} className={'show-container'}>
+                                {/*{movie.title}*/}
+                                {/*{movie.type}*/}
                                 <img
-                                    src={movie.poster_url}
+                                    src={movie.poster_url || null}
                                     alt={movie.title}
                                     width={'192vw'}
                                     height={'166vh'}
@@ -63,11 +48,11 @@ const Home =()=>{
                     <div className={'container1'}>
                         <p className={'title'}>Drama</p>
 
-                        {data.filter(movie=>movie.listed_in.includes('Dramas'))
+                        {data.filter(movie=>movie["listed_in"].includes('Dramas'))
                             .map((movie, index)=>(
                             <div key={index} className={'show-container'}>
                                 <img
-                                    src={movie.poster_url}
+                                    src={movie.poster_url || null}
                                     alt={movie.title}
                                     width={'192vw'}
                                     height={'166vh'}
@@ -78,13 +63,13 @@ const Home =()=>{
                         ))};
 
                     </div>
-                    <div className={'container2'}>
+                    <div className={'container1'}>
                         <p className={'title'}>Comedy</p>
-                        {data.filter(movie=>movie.listed_in.includes('Comedies'))
+                        {data.filter(movie=>movie["listed_in"].includes('Comedies'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
                                     <img
-                                        src={movie.poster_url}
+                                        src={movie.poster_url || null}
                                         alt={movie.title}
                                         width={'192vw'}
                                         height={'166vh'}
@@ -94,13 +79,13 @@ const Home =()=>{
                                 </div>
                             ))};
                     </div>
-                    <div className={'container3'}>
+                    <div className={'container1'}>
                         <p className={'title'}>Crime</p>
-                        {data.filter(movie=>movie.listed_in.includes('Crime'))
+                        {data.filter(movie=>movie["listed_in"].includes('Crime'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
                                     <img
-                                        src={movie.poster_url}
+                                        src={movie.poster_url || null}
                                         alt={movie.title}
                                         width={'192vw'}
                                         height={'166vh'}
@@ -110,13 +95,13 @@ const Home =()=>{
                                 </div>
                             ))};
                     </div>
-                    <div className={'container3'}>
+                    <div className={'container1'}>
                         <p className={'title'}>Romance</p>
-                        {data.filter(movie=>movie.listed_in.includes('Romantic'))
+                        {data.filter(movie=>movie["listed_in"].includes('Romantic'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
                                     <img
-                                        src={movie.poster_url}
+                                        src={movie.poster_url || null}
                                         alt={movie.title}
                                         width={'192vw'}
                                         height={'166vh'}
@@ -126,13 +111,13 @@ const Home =()=>{
                                 </div>
                             ))};
                     </div>
-                    <div className={'container3'}>
+                    <div className={'container1'}>
                         <p className={'title'}>Sci-Fi</p>
-                        {data.filter(movie=>movie.listed_in.includes('Sci-Fi & Fantasy'))
+                        {data.filter(movie=>movie["listed_in"].includes('Sci-Fi & Fantasy'))
                             .map((movie, index)=>(
                                 <div key={index} className={'show-container'}>
                                     <img
-                                        src={movie.poster_url}
+                                        src={movie.poster_url || null}
                                         alt={movie.title}
                                         width={'192vw'}
                                         height={'166vh'}

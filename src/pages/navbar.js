@@ -5,9 +5,12 @@ const Navbar =()=>{
     return (
         <div className={'navBar-container'}>
             <nav>
-                <ul>
+                <ul  className={'navBar'}>
                     <li>
-                        <Link to={''}>Movies</Link>
+                        <Link to={'/movies'} className={'nav'}>Movies</Link>
+                    </li>
+                    <li>
+                        <Link to={'/shows'} className={'nav'}>TV Shows</Link>
                     </li>
                 </ul>
             </nav>

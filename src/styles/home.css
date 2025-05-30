@@ -23,7 +23,7 @@
     justify-self: center;
 }
 
-.container1,.container2,.container3{
+.container1{
     /*position: relative;*/
     border: 1px solid white;
     width: 70vw;

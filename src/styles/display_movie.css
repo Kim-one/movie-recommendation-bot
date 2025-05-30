@@ -1,0 +1,7 @@
+.display-movie-container{
+    position: absolute;
+    /*background-color: #3A7734;*/
+    top:6vh;
+    width: 100vw;
+    height: 94vh;
+}
