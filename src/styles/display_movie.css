@@ -1,7 +1,12 @@
 .display-movie-container{
     position: absolute;
-    /*background-color: #3A7734;*/
-    top:6vh;
+    background-color: #16bc9e;
+    top:5vh;
     width: 100vw;
-    height: 94vh;
+    height: 89vh;
+    overflow-y: auto;
+}
+
+.display-movie-container::-webkit-scrollbar{
+    display: none;
 }

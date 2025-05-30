@@ -1,6 +1,12 @@
 .display-shows-container{
     position: absolute;
-    top:6vh;
+    top:5vh;
     width: 100vw;
-    height: 94vh;
+    height: 89vh;
+    background-color: #9C1A1C;
+    overflow-y: auto;
+}
+
+.display-shows-container::-webkit-scrollbar{
+    display: none;
 }

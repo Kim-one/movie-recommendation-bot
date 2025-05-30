@@ -4,15 +4,18 @@
 
 .home-container{
     position: absolute;
-    top: 6vh;
+    top: 5vh;
     width: 100vw;
-    height: 94vh;
+    height: 89vh;
+    background-color: #3A7734;
+    overflow-y: auto;
+    /*z-index: 10;*/
 }
 
 .outer-container{
     border: 1px solid white;
     width: 90vw;
-    height: 93vh;
+    /*height: 93vh;*/
     justify-self: center;
 }
 
@@ -46,10 +49,11 @@
     flex: 0 0 auto;
 }
 
-.container1::-webkit-scrollbar,.container2::-webkit-scrollbar,.container3::-webkit-scrollbar{
+.container1::-webkit-scrollbar{
     display: none;
 }
 
 .title{
     position: absolute;
 }
+

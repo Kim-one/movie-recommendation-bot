@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    background-color: saddlebrown;
+    /*background-color: saddlebrown;*/
 }
 .navBar-container{
     position: relative;
@@ -8,6 +8,7 @@
     width: 100vw;
     border-bottom: 1px solid #d3926e;
     row-gap: 2vw;
+    background-color: #3B666B;
     /*border-radius: 10px;*/
 }
 

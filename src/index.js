@@ -5,7 +5,6 @@ import Home from "./pages/home";
 import Navbar from "./pages/navbar";
 import DisplayMovies from "./pages/display_movies";
 import DisplayShows from "./pages/display_tv_shows";
-// import Chatbot from "./pages/chatbot";
 
 export default function App(){
     return (
