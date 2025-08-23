@@ -1,54 +1,53 @@
 import '../styles/chatbot.css';
-// import {useState} from "react";
+import {useState} from "react";
+import axios from 'axios';
 
 const ChatBot=()=>{
-    // const [data, setData] = useState([])
+    const [msg, setMsg] = useState("")
+    const [response, setResponse] = useState("")
 
+    const getMessage = async (event)=>{
+        event.preventDefault()
+        // Send entered text to backend
+        try{
+            const res = await axios.post('http://localhost:5000/check-sentence', {msg})
+            setResponse(res.data);
+        } catch (error){
+            console.error("Error sending data", error)
+        }
+
+        // console.log(`Hello from chatbot: You entered ${msg}`)
+    }
     return (
         <div className={'chat-container'}>
             <div className={'chat-bot'}>
                 <div className={'chat-img'}></div>
                 <div className={'chat-input'}>
-                    <input className={'input'} placeholder={'Type something to get a few recommendations (e.g. Recommend a comedy)'}/>
-                    <button className={'send-msg'}>Send</button>
+                    <form onSubmit={getMessage}>
+                        <input type={"text"} onChange={(e)=>setMsg(e.target.value)} value={msg} className={'input'}/>
+                        <button type={"submit"}>Submit</button>
+                    </form>
                 </div>
             </div>
+            {response && <p>{response}</p>}
         </div>
+
         // <div className={'chat-container'}>
-        //     {/*<h1>Chatbot Works</h1>*/}
-        //     <div className={'inner-container'}>
-        //         <div className={'heading'}>
-        //             <h1>Netflix Recommendation Bot</h1>
-        //         </div>
-        //         <div className={'text'}>
-        //             <p>Tell me what you'ld like to watch, and I'll give you some recommendations</p>
-        //         </div>
-        //         <div className={'container'}>
-        //             {/*<div className={'drop-down-menu'}>*/}
-        //             {/*    <p className={'text'}>Select a genre</p>*/}
-        //             {/*    <select>*/}
-        //             {/*        <option>Select a genre</option>*/}
-        //             {/*        <option>Adventure</option>*/}
-        //             {/*        <option>Action</option>*/}
-        //             {/*        <option>Comedy</option>*/}
-        //             {/*        <option>Drama</option>*/}
-        //             {/*        <option>Horror</option>*/}
-        //             {/*        <option>Romance</option>*/}
-        //             {/*        <option>Thriller</option>*/}
-        //             {/*    </select>*/}
-        //             {/*</div>*/}
-        //             <div className={'filter'}>
-        //                 <label className={'text'}>Enter title:</label>
-        //                 <br/>
-        //                 <input className={'filer-field'}/>
-        //             </div>
-        //         </div>
-        //         <div className={'buttons'}>
-        //             <button className={'btn'}>Get Recommendations</button>
+        //     <div className={'chat-bot'}>
+        //         <div className={'chat-img'}></div>
+        //         <div className={'chat-input'}>
+        //             <form onSubmit={getMessage}>
+        //                 <input type={"text"} onChange={(e) => setMsg(e.target.value) }
+        //                        value={msg}
+        //                        className={'input'}
+        //                        placeholder={'Type something to get a few recommendations (e.g. Recommend a comedy)'}/>
+        //                 <button type={'submit'}><button/>
+        //             </form>
+        //
         //         </div>
         //     </div>
         // </div>
     );
-};
+}
 
 export default ChatBot;

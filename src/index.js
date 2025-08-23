@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Navbar from "./pages/navbar";
 import DisplayMovies from "./pages/display_movies";
 import DisplayShows from "./pages/display_tv_shows";
+import Chat from "./pages/chat";
 
 export default function App(){
     return (
@@ -14,6 +15,7 @@ export default function App(){
                     <Route path={'/'} element={<Home/>}></Route>
                     <Route path={'movies'} element={<DisplayMovies/>}></Route>
                     <Route path={'shows'} element={<DisplayShows></DisplayShows>}></Route>
+                    <Route path={'chatbot'} element={<Chat/>}></Route>
                 </Route>
             </Routes>
         </BrowserRouter>

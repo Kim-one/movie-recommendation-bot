@@ -1,0 +1,10 @@
+.chat-page{
+    position: absolute;
+    top: 5vh;
+    width: 100vw;
+    height: 95vh;
+    background-color: #555555;
+}
+.title{
+    justify-self: center;
+}
