@@ -1,9 +1,9 @@
 .chat-container{
-    position: relative;
+    position: absolute;
     height: 7vh;
     width: 100vw;
     background-color: #d3b115;
-    top:90vh;
+    top:93vh;
 }
 
 .chat-bot{
@@ -31,6 +31,10 @@
     height: 5vh;
     margin-top: 1vh;
     /*color: black;*/
+}
+
+.input:focus{
+    outline: none;
 }
 
 .input::placeholder{

@@ -1,10 +1,28 @@
 .chat-page{
-    position: absolute;
-    top: 5vh;
+    position: relative;
+    top: 2vh;
     width: 100vw;
-    height: 95vh;
-    background-color: #555555;
+    height: 89vh;
+    background-color: #3A7734;
+    /*overflow-y: auto;*/
 }
-.title{
+.title1{
     justify-self: center;
+}
+
+.chat-container1{
+    position: absolute;
+    height: 7vh;
+    width: 100vw;
+    background-color: #d3b115;
+    top:85vh;
+}
+
+/*STYLES FOR USER CHAT BUBBLE*/
+.userChatBubble{
+    margin-left: 80vw;
+    /*margin-right: 9;*/
+    padding: 1vw;
+    background-color: #30799B;
+    border-radius: 5px;
 }
