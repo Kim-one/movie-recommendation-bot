@@ -1,0 +1,22 @@
+.login-page{
+    position: absolute;
+    width: 100vw;
+    top:5vh;
+}
+
+.login-container{
+    position: relative;
+    top: 10vh;
+    left: 10vw;
+    width: 30vw;
+    border: 1px solid black;
+    background-color: #9c6c4b;
+}
+
+.login-form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 20vw;
+}

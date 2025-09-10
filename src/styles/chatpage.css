@@ -1,28 +1,88 @@
-.chat-page{
-    position: relative;
-    top: 2vh;
-    width: 100vw;
-    height: 89vh;
-    background-color: #3A7734;
-    /*overflow-y: auto;*/
+*{
+    margin: 0;
+    overflow: visible;
 }
-.title1{
-    justify-self: center;
+.chat-page{
+    position: absolute;
+    /*border: 1px solid black;*/
+    width: 100vw;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: row;
+    top:5vh;
+    background-color: #9c6c4b;
+    /*overflow-y: auto;*/
 }
 
 .chat-container1{
-    position: absolute;
+    position: sticky;
     height: 7vh;
-    width: 100vw;
+    width: 80.51vw;
     background-color: #d3b115;
-    top:85vh;
+    top:95vh;
+    /*margin-left: 2vw;*/
+}
+
+.chat-bot1{
+    position: relative;
+    /*border: 1px solid black;*/
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    height: 7vh;
+    margin-left: 1vw;
+}
+
+.chat-img1{
+    border: 1px solid black;
+    margin-top: 1vh;
+    width: 3vw;
+    height: 5vh;
+    border-radius: 50%;
+}
+
+.chat-history{
+    position: relative;
+    background-color: #555555;
+    height: 95vh;
+    flex-basis: 25%;
+}
+
+.input1, .input1:focus{
+    position: relative;
+    border: none;
+    width: 68vw;
+    height: 5vh;
+    margin-top:1vh;
+    outline: none;
+}
+
+.chat-input1{
+    position: relative;
+    border: 1px solid black;
+    width: 100vw;
 }
 
 /*STYLES FOR USER CHAT BUBBLE*/
 .userChatBubble{
-    margin-left: 80vw;
-    /*margin-right: 9;*/
-    padding: 1vw;
-    background-color: #30799B;
+    position:relative;
+    border: 1px solid black;
     border-radius: 5px;
+    float: right;
+    padding: 4px;
+}
+
+/*STYLES FOR BOT CHAT BUBBLE*/
+.botChatBubble{
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    float: left;
+    padding: 4px;
+}
+
+.msg{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }

@@ -1,7 +1,10 @@
 import {Link, Outlet} from "react-router-dom";
 import '../styles/navbar.css';
+import {useContext} from "react";
+import {AuthContext} from "./AuthContext";
 
 const Navbar =()=>{
+    const {user, logout} = useContext(AuthContext);
     return (
         <div className={'navBar-container'}>
             <nav>
@@ -18,6 +21,18 @@ const Navbar =()=>{
                     <li>
                         <Link to={'/chatbot'} className={'nav'}>ChatBot</Link>
                     </li>
+                    {!user ?(
+                        <div key={"auth-links"}>
+                            <Link to={'/login'} className={'nav'}>Login</Link>
+                            <Link to={'/register'} className={'nav'}>Register</Link>
+                        </div>
+                    ) : (
+                        <div key={"user-info"}>
+                            <span>Welcome, {user.name}({user.email})</span>
+                            <button onClick={logout} className={'logout-btn'}>Logout</button>
+                        </div>
+                    )}
+
                 </ul>
             </nav>
             <Outlet></Outlet>

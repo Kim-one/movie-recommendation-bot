@@ -1,52 +1,33 @@
 import '../styles/chatbot.css';
 import {useState} from "react";
-import axios from 'axios';
+import {useNavigate} from "react-router-dom";
 
 const ChatBot=()=>{
-    const [msg, setMsg] = useState("")
-    const [response, setResponse] = useState("")
+    const [messages, setMessages] = useState("")
+    const navigate = useNavigate();
 
-    const getMessage = async (event)=>{
-        event.preventDefault()
-        // Send entered text to backend
-        try{
-            const res = await axios.post('http://localhost:5000/check-sentence', {msg})
-            setResponse(res.data);
-        } catch (error){
-            console.error("Error sending data", error)
-        }
+    const submitMsg =  (e) => {
+        e.preventDefault();
+        if (!messages.trim()) return;
 
-        // console.log(`Hello from chatbot: You entered ${msg}`)
-    }
+        navigate("/chatbot", {state:{initialMessage: messages}});
+
+        setMessages("")
+        console.log(messages)
+    };
+
     return (
         <div className={'chat-container'}>
             <div className={'chat-bot'}>
                 <div className={'chat-img'}></div>
                 <div className={'chat-input'}>
-                    <form onSubmit={getMessage}>
-                        <input type={"text"} onChange={(e)=>setMsg(e.target.value)} value={msg} className={'input'}/>
+                    <form onSubmit={submitMsg}>
+                        <input type={"text"} onChange={(e)=>setMessages(e.target.value)} value={messages} className={'input'}/>
                         <button type={"submit"}>Submit</button>
                     </form>
                 </div>
             </div>
-            {response && <p>{response}</p>}
         </div>
-
-        // <div className={'chat-container'}>
-        //     <div className={'chat-bot'}>
-        //         <div className={'chat-img'}></div>
-        //         <div className={'chat-input'}>
-        //             <form onSubmit={getMessage}>
-        //                 <input type={"text"} onChange={(e) => setMsg(e.target.value) }
-        //                        value={msg}
-        //                        className={'input'}
-        //                        placeholder={'Type something to get a few recommendations (e.g. Recommend a comedy)'}/>
-        //                 <button type={'submit'}><button/>
-        //             </form>
-        //
-        //         </div>
-        //     </div>
-        // </div>
     );
 }
 

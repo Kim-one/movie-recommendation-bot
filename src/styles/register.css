@@ -1,0 +1,23 @@
+.register{
+
+    position: absolute;
+    width: 100vw;
+    top: 5vh;
+}
+
+.signin-container{
+    position: relative;
+    width: 30vw;
+    background-color: #9c6c4b;
+    border: 1px solid black;
+    top: 10vh;
+    left: 10vw;
+}
+
+.register-form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: 2vh;
+}
