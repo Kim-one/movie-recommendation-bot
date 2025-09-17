@@ -53,6 +53,7 @@ const Chat =()=>{
                 <hr/>
                 <br/>
                 <p>Chats</p>
+
             </div>
             {/*CHAT BOT CONVERSATION AREA*/}
             <div className={'container2'}>
