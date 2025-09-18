@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Movie Recommendation Bot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application that allows users to browse, filter, and get recommendations for movies and TV shows. The app also features a chatbot for interactive movie suggestions and supports user authentication.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Browse movies and TV shows by genre (Action & Adventure, Drama, Comedy, Crime, Sci-Fi & Fantasy, Romance, etc.)
+- Filter results by release year and type (Movie or TV Show)
+- Chatbot for personalized recommendations
+- User authentication (login/register/logout)
+- Responsive interface with navigation bar
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** React (bootstrapped with [Create React App](https://github.com/facebook/create-react-app))
+- **Routing:** React Router
+- **State Management:** React Hooks, Context API
+- **Styling:** CSS
+- **Backend Communication:** Fetch API (expects backend server at `http://localhost:5000`)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
+- Backend server running at `http://localhost:5000` (for authentication and movie data)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Kim-one/movie-recommendation-bot.git
+    cd movie-recommendation-bot
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Start the development server:
+    ```bash
+    npm start
+    ```
+    The app will run at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Available Scripts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `npm start` — Runs the app in development mode.
+- `npm test` — Launches the test runner.
+- `npm run build` — Builds the app for production.
+- `npm run eject` — Ejects the app from Create React App (irreversible).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+- Use the navigation bar to browse Movies, TV Shows, or access the ChatBot.
+- Filter movies by genre and year.
+- Log in or register for personalized features.
+- Chat with the bot for recommendations.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Folder Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `src/pages/` — Main page components (Home, Movies, TV Shows, ChatBot, Login, Register, Navbar, AuthContext)
+- `src/styles/` — CSS files for styling components
+- `public/` — Static assets and HTML template
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is open source.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Kim-one](https://github.com/Kim-one)
